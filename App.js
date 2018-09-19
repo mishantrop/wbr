@@ -11,7 +11,7 @@ class App extends Component {
 
     this.state = {
       ...spread,
-      title: 'Hello, world',
+      title: 'Click on me',
     };
   }
 
