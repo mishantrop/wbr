@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 class App extends Component {
-  constructor() {
+  static propTypes = {
+    text: PropTypes.string,
+  }
+
+  static defaultProps = {
+    text: 'Default text',
+  }
+
+  constructor(props) {
     super();
 
     const spread = {
@@ -11,7 +20,7 @@ class App extends Component {
 
     this.state = {
       ...spread,
-      title: 'Click on me',
+      title: props.text,
     };
   }
 
